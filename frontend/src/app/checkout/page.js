@@ -19,7 +19,7 @@ export default function CheckoutPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const shippingFee = subtotal >= 3500 ? 0 : 200;
+  const shippingFee = subtotal >= 3500 ? 0 : 7.99;
   const total = subtotal + shippingFee;
 
   const handleChange = (e) => {
