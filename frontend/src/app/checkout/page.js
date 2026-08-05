@@ -82,7 +82,7 @@ export default function CheckoutPage() {
                 name="customerName"
                 value={form.customerName}
                 onChange={handleChange}
-                placeholder="e.g. Ayesha Khan"
+                placeholder="e.g. emily smith"
                 className="w-full border border-black/10 rounded px-3 py-2.5 text-sm bg-white"
               />
             </div>
@@ -93,7 +93,7 @@ export default function CheckoutPage() {
                 name="phone"
                 value={form.phone}
                 onChange={handleChange}
-                placeholder="03XX-XXXXXXX"
+                placeholder="1-XXX-XXX-XXXX"
                 className="w-full border border-black/10 rounded px-3 py-2.5 text-sm bg-white"
               />
             </div>
@@ -114,17 +114,14 @@ export default function CheckoutPage() {
           <div className="grid grid-cols-2 gap-4 mb-4">
             <div>
               <label className="block text-xs font-semibold mb-1.5">City</label>
-              <select
+              <input
+                required
                 name="city"
                 value={form.city}
                 onChange={handleChange}
+                placeholder="Enter your city"
                 className="w-full border border-black/10 rounded px-3 py-2.5 text-sm bg-white"
-              >
-                <option>Karachi</option>
-                <option>Lahore</option>
-                <option>Islamabad</option>
-                <option>Other</option>
-              </select>
+              />
             </div>
             <div>
               <label className="block text-xs font-semibold mb-1.5">Postal Code (optional)</label>
@@ -132,7 +129,7 @@ export default function CheckoutPage() {
                 name="postalCode"
                 value={form.postalCode}
                 onChange={handleChange}
-                placeholder="75500"
+                placeholder="Your area's postal code"
                 className="w-full border border-black/10 rounded px-3 py-2.5 text-sm bg-white"
               />
             </div>
@@ -161,18 +158,18 @@ export default function CheckoutPage() {
             return (
               <div key={item.product._id} className="flex justify-between text-sm text-inksoft mb-2.5">
                 <span>{item.product.name} × {item.quantity}</span>
-                <span>Rs. {price * item.quantity}</span>
+                <span>$ {price * item.quantity}</span>
               </div>
             );
           })}
           <div className="flex justify-between text-sm text-inksoft mb-2.5 border-t border-black/10 pt-3 mt-3">
-            <span>Subtotal</span><span>Rs. {subtotal}</span>
+            <span>Subtotal</span><span>$ {subtotal}</span>
           </div>
           <div className="flex justify-between text-sm text-inksoft mb-2.5">
-            <span>Shipping</span><span>{shippingFee === 0 ? "Free" : "Rs. " + shippingFee}</span>
+            <span>Shipping</span><span>{shippingFee === 0 ? "Free" : "$ " + shippingFee}</span>
           </div>
           <div className="flex justify-between font-semibold border-t border-black/10 mt-3 pt-3 mb-5">
-            <span>Total (Payable on Delivery)</span><span>Rs. {total}</span>
+            <span>Total (Payable on Delivery)</span><span> ${total}</span>
           </div>
 
           {error && <p className="text-rosedeep text-sm mb-3">{error}</p>}
