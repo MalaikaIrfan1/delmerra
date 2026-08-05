@@ -20,7 +20,7 @@ export default function CheckoutPage() {
   const [error, setError] = useState('');
 
   const shippingFee = subtotal >= 3500 ? 0 : 7.99;
-  const total = subtotal + shippingFee;
+  const total = (subtotal + shippingFee).toFixed(2);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -157,19 +157,19 @@ export default function CheckoutPage() {
             const price = item.product.salePrice || item.product.price;
             return (
               <div key={item.product._id} className="flex justify-between text-sm text-inksoft mb-2.5">
-                <span>{item.product.name} × {item.quantity}</span>
+                <span>$ {(price * item.quantity).toFixed(2)}</span>
                 <span>$ {price * item.quantity}</span>
               </div>
             );
           })}
           <div className="flex justify-between text-sm text-inksoft mb-2.5 border-t border-black/10 pt-3 mt-3">
-            <span>Subtotal</span><span>$ {subtotal}</span>
+            <span>Subtotal</span><span>$ {subtotal.toFixed(2)}</span>
           </div>
           <div className="flex justify-between text-sm text-inksoft mb-2.5">
-            <span>Shipping</span><span>{shippingFee === 0 ? "Free" : "$ " + shippingFee}</span>
+            <span>Shipping</span><span>{shippingFee === 0 ? "Free" : "$ " + shippingFee.toFixed(2)}</span>
           </div>
           <div className="flex justify-between font-semibold border-t border-black/10 mt-3 pt-3 mb-5">
-            <span>Total (Payable on Delivery)</span><span> ${total}</span>
+            <span>Total (Payable on Delivery)</span><span>${Number(total).toFixed(2)}</span>
           </div>
 
           {error && <p className="text-rosedeep text-sm mb-3">{error}</p>}
