@@ -12,7 +12,7 @@ export default function CheckoutPage() {
     customerName: '',
     phone: '',
     address: '',
-    city: 'Karachi',
+    city: '',
     postalCode: '',
     deliveryNotes: '',
   });
