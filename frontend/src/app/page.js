@@ -104,7 +104,7 @@ export default async function Home() {
                   <img src={p.images[0]} alt={p.name} className="w-full h-full object-cover" />
                 </div>
                 <p className="text-sm font-medium">{p.name}</p>
-                <p className="text-sm text-rose">Rs. {p.salePrice || p.price}</p>
+                <p className="text-sm text-rose">$ {p.salePrice || p.price}</p>
               </Link>
             ))}
           </div>
