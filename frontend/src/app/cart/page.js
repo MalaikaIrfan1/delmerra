@@ -55,7 +55,7 @@ export default function CartPage() {
 
                 <div className="text-right">
                   <div className="font-display font-semibold text-rose mb-2">
-                    Rs. {price * item.quantity}
+                    $ {price * item.quantity}
                   </div>
                   <button
                     onClick={() => removeItem(item.product._id)}
@@ -72,13 +72,13 @@ export default function CartPage() {
         <div className="bg-bgalt rounded p-6 h-fit">
           <h3 className="font-display text-lg mb-5">Order Summary</h3>
           <div className="flex justify-between text-sm text-inksoft mb-2.5">
-            <span>Subtotal</span><span>Rs. {subtotal}</span>
+            <span>Subtotal</span><span>$ {subtotal}</span>
           </div>
           <div className="flex justify-between text-sm text-inksoft mb-2.5">
-            <span>Shipping</span><span>{shippingFee === 0 ? "Free" : "Rs. " + shippingFee}</span>
+            <span>Shipping</span><span>{shippingFee === 0 ? "Free" : "$ " + shippingFee}</span>
           </div>
           <div className="flex justify-between font-semibold border-t border-black/10 mt-3 pt-3">
-            <span>Total (Payable on Delivery)</span><span>Rs. {total}</span>
+            <span>Total (Payable on Delivery)</span><span>$ {total}</span>
           </div>
           <Link href="/checkout">
             <button className="w-full bg-ink text-white py-3.5 rounded mt-5 font-medium">
