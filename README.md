@@ -1,8 +1,8 @@
-# Delmerra 🛋️
+# Delmerra 
 
 A full-stack e-commerce platform for home decor, built end to end as a freelance project for a client.
 
-🌐 **Live:** [www.delmerra.com](https://www.delmerra.com)
+**Live:** [www.delmerra.com](https://www.delmerra.com)
 
 ![Delmerra homepage](./screenshots/home.png)
 
@@ -36,37 +36,6 @@ A full-stack e-commerce platform for home decor, built end to end as a freelance
 ```
 ├── frontend/   # Next.js storefront and admin UI
 └── backend/    # Express API
-```
-
-## Run Locally
-
-```bash
-# 1. Clone
-git clone https://github.com/MalaikaIrfan1/[REPO-NAME].git
-cd [REPO-NAME]
-
-# 2. Backend
-cd backend
-npm install
-npm run dev        # [change if your script is different]
-
-# 3. Frontend (new terminal)
-cd frontend
-npm install
-npm run dev
-```
-
-### Environment variables
-
-Create a `.env` file in `backend/` (and `.env.local` in `frontend/` if needed):
-
-```
-MONGODB_URI=
-JWT_SECRET=
-CLOUDINARY_CLOUD_NAME=
-CLOUDINARY_API_KEY=
-CLOUDINARY_API_SECRET=
-# [replace with the exact variable names your project uses]
 ```
 
 ## Author
