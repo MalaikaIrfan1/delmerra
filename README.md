@@ -4,7 +4,7 @@ A full-stack e-commerce platform for home decor, built end to end as a freelance
 
 **Live:** [www.delmerra.com](https://www.delmerra.com)
 
-![Delmerra homepage](./screenshots/home.png)
+![Delmerra homepage](./screenshot/home.png)
 
 ## Features
 
@@ -29,7 +29,7 @@ A full-stack e-commerce platform for home decor, built end to end as a freelance
 
 | Storefront | Product page | Admin dashboard |
 | --- | --- | --- |
-| ![Storefront](./screenshots/home.png) | ![Product](./screenshots/product.png) | ![Admin](./screenshots/admin.png) |
+| ![Storefront](./screenshot/home.png) | ![Product](./screenshot/product.png) | ![Admin](./screenshot/admin.png) |
 
 ## Project Structure
 
